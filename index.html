@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Play in Background</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <video autoplay  src="1225383547.mp4" id="video"></video>
+        <div class="content">
+            <h2>Play Video in Background.</h2>
+            <button id="btn" onclick="myfunction()">Pause</button>
+        </div>
+    </div>
+
+
+    <script>
+        var video = document.getElementById("video");
+        var btn = document.getElementById("btn");
+
+        function myfunction(){
+            if(video.paused){
+                video.play();
+                btn.innerHTML = "Pause";
+            }else{
+                video.pause();
+                btn.innerHTML = "play";
+            }
+        }
+    </script>
+</body>
+
+</html>
